@@ -1,6 +1,6 @@
 import os
 from django.db import models
-from django.tempates.defaultfilters import slugify
+from django.template.defaultfilters import slugify
 from django_resized import ResizedImageField
 from django.utils import timezone
 from uuid import uuid4
