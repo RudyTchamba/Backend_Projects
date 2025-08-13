@@ -20,7 +20,5 @@ from products.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home, name="home"),  # Home page for products
-    path("contact/", contact, name="contact"),  # Contact page
-    path("blog/", blog, name="blog"),  # Blog page
+    path("", product_list, name="home"),  # Home page for products
 ]

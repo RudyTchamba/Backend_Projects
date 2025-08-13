@@ -7,7 +7,7 @@
 
     <p>Here is a list of items:</p>
     {% for item in mylist %}
-        <li>{{ item | addcent }}----{{ nom | capfirst }}</li>
+        <li>{{ item | addcent }}----{{ nom | cut:'y' | lowercase }}</li>
     {% empty %}
         <li>No items found.</li>
     {% endfor %}
