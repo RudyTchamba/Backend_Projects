@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="py-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for product in products %}
+      <div class="col">
+        <div class="card h-100">
+          {% if product.image %}
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" style="height: 180px; object-fit: contain; padding: 0.75rem;">
+          {% else %}
+            <div class="text-center p-4">
+              <h3>No Image Available</h3>
+            </div>
+          {% endif %}
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text flex-grow-1">{{ product.description }}</p>
+            <p class="card-text"><strong>Price: {{ product.price }}</strong></p>
+            <a href="#" class="btn btn-primary mt-auto">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

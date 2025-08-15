@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load myfilter %}
+
+{% block content %}
+    <h1>Welcome to the Product Home Page</h1>
+
+    <p>Here is a list of items:</p>
+    {% for item in mylist %}
+        <li>{{ item | addcent }}----{{ nom | capfirst }}</li>
+    {% empty %}
+        <li>No items found.</li>
+    {% endfor %}
+{% endblock %}
